@@ -1,0 +1,80 @@
+//! css framework
+// @import "../node_modules/bulma/bulma";
+
+//! utilities
+@import "./styles/utils/mixins"; // global mixins
+@import "./styles/utils/variables"; // global variables
+
+//! setup
+@import "./styles/setup/normalize"; // normalize browsers to make more consistent
+@import "./styles/setup/clearfix"; // clearfix for floats
+@import "./styles/setup/border-box"; // global border-box setting
+
+//! global styles
+@import "./styles/global/typography"; // global typography
+@import "./styles/global/global"; // global styles
+
+//! sections
+@import "./styles/layout/header";
+
+body {
+  margin: 0;
+}
+
+#holographic {
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgb(242, 244, 119),
+    rgb(238, 121, 102),
+    rgb(174, 245, 185),
+    rgb(162, 209, 255),
+    rgb(232, 88, 127)
+  );
+  background-size: 200%;
+  width: 350%;
+  height: 350%;
+  top: -100%;
+  left: -100%;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.center {
+  pointer-events: none;
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo {
+  margin: auto;
+  padding: 0.5em;
+  width: 650px;
+  font-size: 6em;
+  color: white;
+}
+
+.content {
+  margin: auto;
+}
+
+.title {
+  font-size: 6em;
+  color: white;
+}
+
+.subtitle {
+  font-size: 2em;
+  color: white;
+}
