@@ -21,10 +21,6 @@ function handleMouseMove(event) {
 }
 
 function handleDeviceOrientation(event) {
-  console.info('<--event-->');
-  console.log(event);
-  console.info('<--/event-->');
-
   const value = Math.abs(event.gamma) / 90;
   const rotation = Math.abs(event.alpha);
   updateHolographicBackground(value, rotation);
@@ -42,7 +38,7 @@ function handleTouchend() {
               handleDeviceOrientation,
               true
             );
-          }
+          } // TODO else timer
         })
         .catch(console.error);
     } else {
